@@ -1101,3 +1101,23 @@ section.s{padding:80px 20px;}
   }
 
 }
+
+.cat .info h3{
+    font-size:22px;
+    line-height:0.95;
+    max-width:calc(100% - 42px);
+  }
+
+  .cat .info{
+    left:14px;
+    right:14px;
+    bottom:14px;
+  }
+
+  .cat .info .arrow{
+    width:32px;
+    height:32px;
+    right:0;
+  }
+
+}
