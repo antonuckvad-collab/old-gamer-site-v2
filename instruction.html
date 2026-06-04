@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Инструкция — OLD GAMER сайт</title>
+<link rel="icon" type="image/png" href="assets/head.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<template id="__bundler_thumbnail" data-bg-color="#0A0D12">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#0A0D12"/>
+    <g transform="translate(600 400)">
+      <rect x="-280" y="-180" width="560" height="360" rx="20" fill="none" stroke="#1F2632" stroke-width="3"/>
+      <line x1="-240" y1="-110" x2="240" y2="-110" stroke="#E63027" stroke-width="6"/>
+      <text text-anchor="middle" y="-30" fill="#F4F6FA" font-family="Oswald,Impact,sans-serif" font-weight="700" font-size="64" letter-spacing="3">ИНСТРУКЦИЯ</text>
+      <text text-anchor="middle" y="36" fill="#F2B600" font-family="JetBrains Mono,monospace" font-size="22" letter-spacing="4">// OLD GAMER</text>
+      <line x1="-180" y1="100" x2="180" y2="100" stroke="#1F2632" stroke-width="2"/>
+      <line x1="-180" y1="130" x2="100" y2="130" stroke="#1F2632" stroke-width="2"/>
+    </g>
+  </svg>
+</template>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#0A0D12;color:#F4F6FA;font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.7}
+a{color:#2EA39B}a:hover{text-decoration:underline}
+header{background:#070A0F;border-bottom:1px solid #1F2632;padding:16px 32px;display:flex;align-items:center;gap:18px;position:sticky;top:0;z-index:10}
+header img{height:40px;filter:drop-shadow(0 4px 12px rgba(230,48,39,.3))}
+header .title{font-family:'Oswald',sans-serif;font-size:18px;text-transform:uppercase;letter-spacing:.06em}
+header .sub{font-size:12px;color:#6B7383;margin-top:2px}
+nav.toc{position:fixed;top:72px;left:0;width:240px;height:calc(100vh - 72px);overflow-y:auto;border-right:1px solid #1F2632;padding:24px 20px;background:#070A0F}
+nav.toc h4{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#6B7383;margin-bottom:12px;font-family:'JetBrains Mono',monospace}
+nav.toc a{display:block;font-size:13px;color:#A6AFBE;padding:6px 10px;border-radius:6px;margin-bottom:2px;transition:.15s}
+nav.toc a:hover{color:#F4F6FA;background:#10141B;text-decoration:none}
+nav.toc a.sub{padding-left:22px;font-size:12px;color:#6B7383}
+.main{margin-left:240px;padding:48px 48px 96px;max-width:960px}
+h1{font-family:'Oswald',sans-serif;font-size:clamp(32px,4vw,52px);text-transform:uppercase;line-height:.92;margin-bottom:32px}
+h1 .red{color:#E63027}
+.section{margin-bottom:64px;scroll-margin-top:90px}
+h2{font-family:'Oswald',sans-serif;font-size:28px;text-transform:uppercase;letter-spacing:.04em;margin-bottom:20px;display:flex;align-items:center;gap:14px}
+h2 .num{font-size:12px;background:#E63027;color:#fff;padding:4px 9px;border-radius:5px;letter-spacing:.12em}
+h3{font-family:'Oswald',sans-serif;font-size:18px;text-transform:uppercase;letter-spacing:.04em;color:#F2B600;margin:28px 0 10px}
+p{color:#A6AFBE;font-size:14.5px;margin-bottom:12px}
+ul,ol{color:#A6AFBE;font-size:14.5px;margin-bottom:12px;padding-left:22px;display:flex;flex-direction:column;gap:6px}
+li::marker{color:#E63027}
+strong{color:#F4F6FA;font-weight:600}
+code{font-family:'JetBrains Mono',monospace;font-size:12.5px;background:#10141B;border:1px solid #1F2632;padding:3px 8px;border-radius:5px;color:#2EA39B}
+pre{background:#10141B;border:1px solid #1F2632;border-radius:10px;padding:20px;overflow-x:auto;margin:14px 0}
+pre code{background:none;border:none;padding:0;font-size:13px;color:#A6AFBE;line-height:1.6}
+pre code .c{color:#6B7383}pre code .k{color:#E63027}pre code .s{color:#42D17A}pre code .n{color:#F2B600}
+.tip{background:rgba(46,163,155,.1);border:1px solid rgba(46,163,155,.3);border-radius:10px;padding:16px 18px;margin:16px 0;font-size:14px;color:#A6AFBE}
+.tip strong{color:#2EA39B}
+.warn{background:rgba(230,48,39,.08);border:1px solid rgba(230,48,39,.25);border-radius:10px;padding:16px 18px;margin:16px 0;font-size:14px;color:#A6AFBE}
+.warn strong{color:#E63027}
+.step-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:16px 0}
+.step-box{background:#10141B;border:1px solid #1F2632;border-radius:10px;padding:18px 20px}
+.step-box .n{font-family:'JetBrains Mono',monospace;font-size:11px;color:#E63027;letter-spacing:.16em;margin-bottom:8px;text-transform:uppercase}
+.step-box b{font-family:'Oswald',sans-serif;font-size:16px;text-transform:uppercase;display:block;margin-bottom:6px}
+.step-box p{font-size:13px;margin:0}
+hr{border:0;border-top:1px solid #1F2632;margin:40px 0}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px}
+th{text-align:left;padding:10px 14px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#6B7383;border-bottom:1px solid #1F2632}
+td{padding:10px 14px;border-bottom:1px solid rgba(31,38,50,.6);color:#A6AFBE;vertical-align:top}
+td strong{color:#F4F6FA}
+.tag-pill{display:inline-block;padding:2px 9px;border-radius:20px;font-size:11px;font-family:'JetBrains Mono',monospace;letter-spacing:.1em;font-weight:600}
+.tag-ps5{background:rgba(0,112,209,.2);color:#5BB4FF}
+.tag-xbox{background:rgba(16,124,16,.2);color:#4DCA4D}
+.tag-switch{background:rgba(220,0,18,.2);color:#FF5555}
+.tag-switch2{background:rgba(170,0,80,.2);color:#FF66BB}
+.tag-pc{background:rgba(110,0,180,.2);color:#CC66FF}
+@media(max-width:900px){nav.toc{display:none}.main{margin-left:0;padding:32px 20px 64px}}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="assets/logo.png" alt="OLD GAMER">
+  <div>
+    <div class="title">Инструкция</div>
+    <div class="sub">Google Sheets · Apps Script · Telegram Bot · Платформы · GitHub · Vercel · SEO</div>
+  </div>
+</header>
+
+<nav class="toc">
+  <h4>// Содержание</h4>
+  <a href="#structure">01 · Структура сайта</a>
+  <a href="#sheets">02 · Google Sheets → диски</a>
+  <a class="sub" href="#sheets-setup">— Структура таблицы</a>
+  <a class="sub" href="#sheets-script">— Apps Script код</a>
+  <a class="sub" href="#sheets-deploy">— Деплой Apps Script</a>
+  <a href="#bot">03 · Telegram Bot</a>
+  <a href="#platforms">04 · Платформы</a>
+  <a class="sub" href="#platforms-list">— Список кодов</a>
+  <a class="sub" href="#platforms-add">— Добавить новую</a>
+  <a href="#deploy">05 · GitHub + Vercel</a>
+  <a class="sub" href="#deploy-github">— Загрузить на GitHub</a>
+  <a class="sub" href="#deploy-vercel">— Подключить Vercel</a>
+  <a class="sub" href="#deploy-domain">— Свой домен</a>
+  <a href="#map">06 · Карта (Яндекс / Google)</a>
+  <a href="#seo">07 · SEO</a>
+  <a href="#favicon">08 · Фавиконка</a>
+  <a href="#webmaster">09 · Вебмастер</a>
+</nav>
+
+<div class="main">
+<h1>Инструкция для <span class="red">владельца</span> сайта</h1>
+
+<!-- ─── STRUCTURE ──────────────────────────────── -->
+<div class="section" id="structure">
+  <h2><span class="num">01</span>Структура сайта</h2>
+  <p>Сайт — статический: обычные файлы HTML/CSS/JS без серверной части. Деплоится на <strong>GitHub + Vercel</strong> за 5 минут. Диски для предзаказов берутся из Google Sheets через Apps Script Web App.</p>
+
+  <pre><code>oldgamer/
+├── index.html          <span class="c">← вся страница сайта</span>
+├── styles.css          <span class="c">← все стили</span>
+├── script.js           <span class="c">← весь JavaScript + интеграция с Sheets</span>
+├── privacy.html        <span class="c">← политика конфиденциальности</span>
+├── assets/
+│   ├── logo.png        <span class="c">← логотип в шапке и футере</span>
+│   ├── head.png        <span class="c">← аватарка / фавиконка</span>
+│   ├── ps5-hero.png    <span class="c">← фото консоли в hero-блоке</span>
+│   ├── shop-1..4.jpg   <span class="c">← фото магазина в слайдере</span>
+│   └── nintendo-switch.jpg
+└── apps-script/
+    └── Code.gs         <span class="c">← код для Google Apps Script</span></code></pre>
+
+  <h3>Что редактировать вручную</h3>
+  <table>
+    <tr><th>Что изменить</th><th>Где</th></tr>
+    <tr><td>Телефон, адрес, ссылки, часы</td><td><code>index.html</code> — поиск по тексту</td></tr>
+    <tr><td>Диски / предзаказы</td><td><strong>Google Sheets</strong> — без правки кода</td></tr>
+    <tr><td>Фото магазина (слайдер)</td><td>Заменить файлы <code>assets/shop-1..4.jpg</code></td></tr>
+    <tr><td>Цены калькулятора трейд-ин</td><td><code>index.html</code> → атрибуты <code>data-base</code> в блоке <code>#estimator</code></td></tr>
+    <tr><td>Логотип, фавиконка</td><td>Заменить <code>assets/logo.png</code>, <code>assets/head.png</code></td></tr>
+    <tr><td>Добавить новую платформу</td><td><code>script.js</code> → объект <code>PLATFORM_CONFIG</code></td></tr>
+    <tr><td>URL Apps Script</td><td><code>script.js</code> → константа <code>APPS_SCRIPT_URL</code> (первая строка)</td></tr>
+  </table>
+</div>
+
+<!-- ─── SHEETS ─────────────────────────────────── -->
+<div class="section" id="sheets">
+  <h2><span class="num">02</span>Google Sheets — каталог предзаказов</h2>
+  <p>Все диски и игры управляются через обычную Google Таблицу. Меняешь строку → обновляешь страницу → карточка на сайте изменилась. Никакого кода не нужно.</p>
+
+  <h3 id="sheets-setup">Структура листа «Диски»</h3>
+  <p>В таблице должен быть лист с именем <strong>Диски</strong>. Строка 1 — заголовки (строго как в таблице ниже):</p>
+
+  <table>
+    <tr><th>Колонка</th><th>Название</th><th>Пример</th><th>Описание</th></tr>
+    <tr><td>A</td><td><code>id</code></td><td>1</td><td>Порядковый номер (любой)</td></tr>
+    <tr><td>B</td><td><code>title</code></td><td>GTA VI</td><td>Название игры</td></tr>
+    <tr><td>C</td><td><code>platform</code></td><td>ps5</td><td>Код платформы (см. раздел 04)</td></tr>
+    <tr><td>D</td><td><code>platformLabel</code></td><td>PlayStation 5</td><td>Полное название платформы</td></tr>
+    <tr><td>E</td><td><code>price</code></td><td>4 999 ₽</td><td>Цена строкой</td></tr>
+    <tr><td>F</td><td><code>release</code></td><td>Релиз: осень 2026</td><td>Дата релиза или статус</td></tr>
+    <tr><td>G</td><td><code>meta</code></td><td>Action · Rockstar · Single</td><td>Жанр, студия — показывается под названием</td></tr>
+    <tr><td>H</td><td><code>status</code></td><td>preorder</td><td><code>preorder</code> — предзаказ, <code>stock</code> — в наличии</td></tr>
+    <tr><td>I</td><td><code>imageUrl</code></td><td>https://…/cover.jpg</td><td>URL обложки. Пусто — авто-арт из названия</td></tr>
+    <tr><td>J</td><td><code>active</code></td><td>TRUE</td><td><strong>TRUE</strong> — показывать, <strong>FALSE</strong> — скрыть</td></tr>
+  </table>
+
+  <div class="tip">
+    <strong>Подсказка:</strong> чтобы быстро заполнить таблицу, попроси ChatGPT:<br>
+    <em>«Заполни Google Sheets для магазина видеоигр. Колонки: id, title, platform, platformLabel, price, release, meta, status, imageUrl, active. Добавь 15 актуальных игр для PS5, Xbox и Switch на 2025–2026 г. с ценами в рублях. imageUrl оставь пустым.»</em>
+  </div>
+
+  <h3>Как скрыть/показать игру</h3>
+  <p>В колонке <code>active</code> поставь <strong>FALSE</strong> — карточка исчезнет с сайта после обновления страницы. Снова <strong>TRUE</strong> — появится обратно.</p>
+
+  <h3>Обложки (imageUrl)</h3>
+  <ul>
+    <li>Если оставить пустым — сайт нарисует стилизованную арт-обложку с названием игры</li>
+    <li>Если вставить URL картинки — будет использоваться она (рекомендуем 600×800 px, JPG)</li>
+    <li>Можно использовать любой публичный URL (Google Drive: файл → «Поделиться → Все» → заменить <code>/file/d/ID/view</code> на <code>/uc?id=ID</code>)</li>
+  </ul>
+
+  <h3 id="sheets-script">Apps Script — код сервера</h3>
+  <p>В таблице: <strong>Расширения → Apps Script</strong>. Вставь содержимое файла <code>apps-script/Code.gs</code> из архива проекта. В начале файла укажи ID своей таблицы:</p>
+
+  <pre><code><span class="k">var</span> <span class="n">SPREADSHEET_ID</span> = <span class="s">'ВСТАВЬТЕ_ID_ТАБЛИЦЫ_СЮДА'</span>; <span class="c">// ← заменить!</span></code></pre>
+
+  <p>ID таблицы — это часть URL между <code>/spreadsheets/d/</code> и <code>/edit</code>:</p>
+  <pre><code>https://docs.google.com/spreadsheets/d/<span class="n">ВОТ_ЭТО_И_ЕСТЬ_ID</span>/edit</code></pre>
+
+  <h3>Telegram-уведомления (опционально)</h3>
+  <p>Чтобы получать уведомления о новых заявках в Telegram, укажи токен бота и chat_id в настройках Apps Script:</p>
+  <ol>
+    <li>В редакторе Apps Script: <strong>Настройки проекта (шестерёнка)</strong> → <strong>Свойства скрипта</strong></li>
+    <li>Добавь два свойства:</li>
+  </ol>
+  <table>
+    <tr><th>Ключ</th><th>Значение</th></tr>
+    <tr><td><code>TELEGRAM_BOT_TOKEN</code></td><td>токен от @BotFather</td></tr>
+    <tr><td><code>TELEGRAM_CHAT_ID</code></td><td>ID чата куда слать уведомления</td></tr>
+  </table>
+  <div class="tip"><strong>Если не указать</strong> — Apps Script просто пропустит отправку, заявки всё равно сохранятся в лист «Заявки».</div>
+
+  <h3 id="sheets-deploy">Деплой Apps Script</h3>
+  <div class="step-grid">
+    <div class="step-box"><div class="n">01</div><b>Deploy</b><p>«Развернуть» → «Новое развёртывание» → Тип: <strong>Веб-приложение</strong></p></div>
+    <div class="step-box"><div class="n">02</div><b>Доступ</b><p>Выполнять как: <strong>Я</strong>. Доступ: <strong>Все</strong> (анонимные пользователи).</p></div>
+    <div class="step-box"><div class="n">03</div><b>Скопируй URL</b><p>Скопируй URL вида <code>script.google.com/macros/s/…/exec</code></p></div>
+    <div class="step-box"><div class="n">04</div><b>Вставь в script.js</b><p>Открой <code>script.js</code>, замени значение константы <code>APPS_SCRIPT_URL</code> в самом начале файла.</p></div>
+  </div>
+
+  <div class="warn">
+    <strong>Важно:</strong> при каждом изменении кода <code>Code.gs</code> нужно создавать <strong>новое</strong> развёртывание — иначе старый URL будет запускать старый код.
+  </div>
+</div>
+
+<!-- ─── BOT ─────────────────────────────────────── -->
+<div class="section" id="bot">
+  <h2><span class="num">03</span>Telegram Bot — уведомления о заявках</h2>
+
+  <h3>Создать бота</h3>
+  <ol>
+    <li>Открой Telegram → найди <strong>@BotFather</strong></li>
+    <li>Напиши <code>/newbot</code> → введи имя и username (например <code>oldgamer_orders_bot</code>)</li>
+    <li>Скопируй токен вида <code>1234567890:ABCdef…</code></li>
+  </ol>
+
+  <h3>Узнать Chat ID</h3>
+  <ol>
+    <li>Напиши любое сообщение своему боту</li>
+    <li>Открой в браузере: <code>https://api.telegram.org/bot<strong>ТОКЕН</strong>/getUpdates</code></li>
+    <li>Найди <code>"chat":{"id":XXXXXXXX}</code> — это твой Chat ID</li>
+  </ol>
+
+  <div class="tip">
+    <strong>Совет:</strong> создай группу «OLD GAMER — заявки», добавь туда бота и нескольких менеджеров — все будут видеть новые предзаказы одновременно. Chat ID группы тоже берётся через getUpdates.
+  </div>
+
+  <h3>Что приходит в уведомлении</h3>
+  <pre><code>🎮 Новый предзаказ!
+
+🕹 Игра: GTA VI
+📺 Платформа: PlayStation 5
+💰 Цена: 4 999 ₽
+📅 Релиз: осень 2026
+
+👤 Имя: Иван
+📱 Телефон: +7 (923) 000-00-00
+💬 Telegram: @ivan
+📝 Комментарий: японский регион
+
+🕐 04.06.2026 14:22</code></pre>
+</div>
+
+<!-- ─── PLATFORMS ──────────────────────────────── -->
+<div class="section" id="platforms">
+  <h2><span class="num">04</span>Платформы в блоке предзаказов</h2>
+  <p>Фильтр-табы генерируются <strong>автоматически</strong> — какие платформы есть в активных карточках из Sheets, те и появляются. Каждой платформе автоматически присваивается цветная полоска.</p>
+
+  <h3 id="platforms-list">Поддерживаемые коды платформ</h3>
+  <p>В колонке <code>platform</code> в Google Sheets пиши строго один из этих кодов:</p>
+
+  <table>
+    <tr><th>Код</th><th>Полное название</th><th>Цвет полоски</th></tr>
+    <tr><td><span class="tag-pill tag-ps5">ps5</span></td><td><strong>PlayStation 5</strong></td><td>Синий градиент</td></tr>
+    <tr><td><code>ps4</code></td><td><strong>PlayStation 4</strong></td><td>Тёмно-синий</td></tr>
+    <tr><td><code>ps3</code></td><td><strong>PlayStation 3</strong></td><td>Тёмно-синий приглушённый</td></tr>
+    <tr><td><code>ps2</code></td><td><strong>PlayStation 2</strong></td><td>Тёмный синий</td></tr>
+    <tr><td><span class="tag-pill tag-xbox">xbox</span></td><td><strong>Xbox Series X|S</strong></td><td>Зелёный градиент</td></tr>
+    <tr><td><code>xboxone</code></td><td><strong>Xbox One</strong></td><td>Тёмно-зелёный</td></tr>
+    <tr><td><span class="tag-pill tag-switch">switch</span></td><td><strong>Nintendo Switch</strong></td><td>Красный градиент</td></tr>
+    <tr><td><span class="tag-pill tag-switch2">switch2</span></td><td><strong>Nintendo Switch 2</strong></td><td>Малиновый градиент</td></tr>
+    <tr><td><span class="tag-pill tag-pc">pc</span></td><td><strong>PC / Steam</strong></td><td>Фиолетовый градиент</td></tr>
+  </table>
+
+  <div class="tip">
+    <strong>Пример:</strong> напишешь в Sheets <code>switch2</code> → на сайте автоматически появится таб «Nintendo Switch 2» и карточки с малиновой полоской. Никакого кода менять не нужно.
+  </div>
+
+  <h3 id="platforms-add">Добавить совсем новую платформу</h3>
+  <p>Открой <code>script.js</code>, найди объект <code>PLATFORM_CONFIG</code> в самом начале файла, добавь строку:</p>
+  <pre><code>ps6: {
+  <span class="k">label:</span> <span class="s">'PlayStation 6'</span>,
+  <span class="k">short:</span> <span class="s">'PS6'</span>,
+  <span class="k">bg:</span>    <span class="s">'linear-gradient(90deg,rgba(0,30,120,.9),rgba(0,80,220,.9))'</span>
+},</code></pre>
+  <p>После этого пиши <code>ps6</code> в Sheets — цвет и название подтянутся автоматически.</p>
+
+  <h3>Как работает автогенерация табов</h3>
+  <ul>
+    <li>Нет ни одной карточки с <code>xbox</code> → таб Xbox не появится</li>
+    <li>Появилась карточка <code>switch2</code> → таб Nintendo Switch 2 сгенерируется сам</li>
+    <li>Порядок табов: «Все», затем в порядке появления платформ в данных</li>
+  </ul>
+</div>
+
+<!-- ─── DEPLOY ──────────────────────────────────── -->
+<div class="section" id="deploy">
+  <h2><span class="num">05</span>GitHub + Vercel — публикация сайта</h2>
+  <p>Сайт — обычные статические файлы. Vercel бесплатно хостит их и автоматически обновляет при каждом изменении в GitHub.</p>
+
+  <h3 id="deploy-github">Загрузить на GitHub</h3>
+  <p><strong>Вариант А — через браузер (без Git):</strong></p>
+  <ol>
+    <li>Зарегистрируйся на <a href="https://github.com" target="_blank">github.com</a></li>
+    <li>New repository → введи название (например <code>oldgamer-site</code>) → Create</li>
+    <li>«uploading an existing file» → перетащи все файлы проекта → Commit</li>
+  </ol>
+
+  <p><strong>Вариант Б — через терминал:</strong></p>
+  <pre><code>git init
+git add .
+git commit -m "initial commit"
+git remote add origin https://github.com/ВАШ_НИК/oldgamer-site.git
+git push -u origin main</code></pre>
+
+  <h3 id="deploy-vercel">Подключить Vercel</h3>
+  <div class="step-grid">
+    <div class="step-box"><div class="n">01</div><b>Регистрация</b><p>Зайди на <a href="https://vercel.com" target="_blank">vercel.com</a> → Sign Up → Continue with GitHub</p></div>
+    <div class="step-box"><div class="n">02</div><b>New Project</b><p>Add New → Project → импортируй репозиторий <code>oldgamer-site</code></p></div>
+    <div class="step-box"><div class="n">03</div><b>Framework</b><p>Framework Preset: <strong>Other</strong> (статический сайт, не Next.js)</p></div>
+    <div class="step-box"><div class="n">04</div><b>Deploy</b><p>Нажми Deploy — через 30 секунд сайт онлайн на адресе <code>*.vercel.app</code></p></div>
+  </div>
+
+  <div class="tip">
+    <strong>Автообновление:</strong> изменил файл в GitHub → Vercel автоматически пересобирает и публикует сайт за 15–30 секунд. Никаких дополнительных действий не нужно.
+  </div>
+
+  <h3 id="deploy-domain">Свой домен (например oldgamer.ru)</h3>
+  <ol>
+    <li>Vercel → твой проект → Settings → Domains → Add</li>
+    <li>Введи домен: <code>oldgamer.ru</code></li>
+    <li>Vercel покажет нужные DNS-записи — добавь их у регистратора домена</li>
+    <li>Подождать 15–60 минут — домен заработает, SSL-сертификат подключится автоматически</li>
+  </ol>
+
+  <h3>Обновить что-то на сайте без Git</h3>
+  <ol>
+    <li>Открой файл в GitHub (например <code>index.html</code>)</li>
+    <li>Нажми карандаш (Edit this file)</li>
+    <li>Внеси правки → Commit changes</li>
+    <li>Vercel автоматически задеплоит изменения</li>
+  </ol>
+
+  <div class="tip">
+    <strong>Альтернатива без GitHub:</strong> <a href="https://app.netlify.com/drop" target="_blank">Netlify Drop</a> — просто перетащи папку с файлами, сайт онлайн за 30 секунд. Но тогда автообновление не работает — придётся загружать каждый раз заново.
+  </div>
+</div>
+
+<!-- ─── MAP ──────────────────────────────────────── -->
+<div class="section" id="map">
+  <h2><span class="num">06</span>Как вставить настоящую карту</h2>
+  <p>Сейчас в блоке «Где найти» стоит стилизованная SVG-заглушка. Когда понадобится настоящая — замени её на iframe от Яндекс Карт.</p>
+
+  <h3>Вариант 1 — Яндекс Карты (рекомендуем)</h3>
+  <div class="step-grid">
+    <div class="step-box"><div class="n">01</div><b>Конструктор</b><p>Зайди на <a href="https://yandex.ru/map-constructor/" target="_blank">yandex.ru/map-constructor</a></p></div>
+    <div class="step-box"><div class="n">02</div><b>Адрес</b><p>Введи «Новосибирск, Троллейная 130а, ТРЦ Континент» → поставь метку.</p></div>
+    <div class="step-box"><div class="n">03</div><b>Настройки</b><p>Размер: 100%×100%, включи метку.</p></div>
+    <div class="step-box"><div class="n">04</div><b>Получи код</b><p>«Получить код» → скопируй <code>&lt;iframe&gt;</code>.</p></div>
+  </div>
+
+  <p>Открой <code>index.html</code>, найди <code>&lt;div class="map" id="map-drag"</code> — удали весь SVG внутри и вставь iframe:</p>
+  <pre><code>&lt;div class=<span class="s">"map"</span> aria-label=<span class="s">"Карта · ТРЦ Континент, Новосибирск"</span>&gt;
+  &lt;iframe
+    src=<span class="s">"https://yandex.ru/map-widget/v1/?ll=82.9XXX%2C54.9XXX&amp;z=16&amp;pt=..."</span>
+    width=<span class="s">"100%"</span>
+    height=<span class="s">"100%"</span>
+    frameborder=<span class="s">"0"</span>
+    style=<span class="s">"border:0;border-radius:16px;position:absolute;inset:0"</span>
+    allowfullscreen
+    title=<span class="s">"OLD GAMER на карте"</span>
+  &gt;&lt;/iframe&gt;
+&lt;/div&gt;</code></pre>
+
+  <div class="warn"><strong>Google Maps в России</strong> работает нестабильно — лучше использовать Яндекс Карты.</div>
+
+  <h3>Кнопка «Открыть на карте» (без iframe)</h3>
+  <p>Если iframe не нужен — добавь кнопку в блок <code>.loc-card</code>:</p>
+  <pre><code>&lt;a href=<span class="s">"https://yandex.ru/maps/-/КОД"</span>
+   target=<span class="s">"_blank"</span>
+   class=<span class="s">"btn btn-ghost"</span>&gt;
+  Открыть на Яндекс Картах →
+&lt;/a&gt;</code></pre>
+  <p>Короткую ссылку получи в Яндекс Картах: открой место → «Поделиться».</p>
+</div>
+
+<!-- ─── SEO ────────────────────────────────────── -->
+<div class="section" id="seo">
+  <h2><span class="num">07</span>SEO — что уже сделано</h2>
+  <ul>
+    <li>✅ <code>&lt;title&gt;</code> с ключевыми словами</li>
+    <li>✅ <code>meta description</code> с адресом и услугами</li>
+    <li>✅ JSON-LD LocalBusiness (структурированные данные)</li>
+    <li>✅ Open Graph (превью в соцсетях и мессенджерах)</li>
+    <li>✅ <code>alt</code> у всех изображений</li>
+    <li>✅ Семантика H1 / H2 / H3</li>
+    <li>✅ <code>rel=canonical</code></li>
+  </ul>
+
+  <h3>Что сделать вручную</h3>
+  <ol>
+    <li>В <code>index.html</code> замени все вхождения <code>https://oldgamer.ru</code> на реальный URL</li>
+    <li>Создай <code>sitemap.xml</code> на <a href="https://www.xml-sitemaps.com" target="_blank">xml-sitemaps.com</a></li>
+    <li>Создай <code>robots.txt</code> в корне проекта:</li>
+  </ol>
+  <pre><code>User-agent: *
+Allow: /
+Sitemap: https://твойсайт.ru/sitemap.xml</code></pre>
+
+  <div class="tip">
+    <strong>Самое важное для локального SEO:</strong> зарегистрируй магазин в <a href="https://business.yandex.ru" target="_blank">Яндекс Бизнес</a> и <a href="https://business.google.com" target="_blank">Google Business Profile</a> — это даёт карточку магазина в поиске «видеоигры Новосибирск» и на картах.
+  </div>
+</div>
+
+<!-- ─── FAVICON ────────────────────────────────── -->
+<div class="section" id="favicon">
+  <h2><span class="num">08</span>Фавиконка</h2>
+  <p>Фавиконка уже подключена — это <code>assets/head.png</code>. Для полного набора (iOS, Android, Windows):</p>
+  <ol>
+    <li>Зайди на <a href="https://realfavicongenerator.net" target="_blank">realfavicongenerator.net</a></li>
+    <li>Загрузи <code>assets/head.png</code>, фон: <code>#0A0D12</code></li>
+    <li>Скачай архив → распакуй в <code>assets/favicon/</code></li>
+    <li>Замени теги в <code>&lt;head&gt;</code> на предложенные генератором</li>
+  </ol>
+</div>
+
+<!-- ─── WEBMASTER ──────────────────────────────── -->
+<div class="section" id="webmaster">
+  <h2><span class="num">09</span>Яндекс.Вебмастер и Google Search Console</h2>
+
+  <h3>Яндекс.Вебмастер</h3>
+  <ol>
+    <li><a href="https://webmaster.yandex.ru" target="_blank">webmaster.yandex.ru</a> → Добавить сайт</li>
+    <li>Способ «HTML-файл» → скачай <code>yandex_XXXXX.html</code></li>
+    <li>Положи его в корень проекта (рядом с <code>index.html</code>), запушь в GitHub</li>
+    <li>Нажми «Проверить» → Индексирование → Файлы Sitemap → добавь URL</li>
+  </ol>
+
+  <h3>Google Search Console</h3>
+  <ol>
+    <li><a href="https://search.google.com/search-console" target="_blank">search.google.com/search-console</a> → Добавить ресурс → «URL-префикс»</li>
+    <li>Подтверди через HTML-тег — вставь в <code>&lt;head&gt;</code> файла <code>index.html</code>:</li>
+  </ol>
+  <pre><code>&lt;meta name=<span class="s">"google-site-verification"</span> content=<span class="s">"ВАШ_КОД"</span>&gt;</code></pre>
+  <ol start="3">
+    <li>Нажми «Подтвердить» → добавь Sitemap</li>
+  </ol>
+</div>
+
+</div><!-- /main -->
+</body>
+</html>
