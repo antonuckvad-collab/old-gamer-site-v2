@@ -1013,13 +1013,12 @@ footer .bottom .mono{letter-spacing:.12em;text-transform:uppercase}
   }
 
   .disc-grid{
-    display:flex;
-    overflow-x:auto;
-    scroll-snap-type:x mandatory;
-    gap:14px;
-    padding-bottom:16px;
-    -webkit-overflow-scrolling:touch;
-    scrollbar-width:none;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:18px;
+    overflow:visible;
+    scroll-snap-type:none;
+    padding-bottom:0;
   }
 
   .disc-grid::-webkit-scrollbar{
@@ -1027,13 +1026,14 @@ footer .bottom .mono{letter-spacing:.12em;text-transform:uppercase}
   }
 
   .disc-card{
-    flex:0 0 82vw;
-    max-width:340px;
-    scroll-snap-align:start;
+    width:100%;
+    max-width:none;
+    flex:none;
+    scroll-snap-align:none;
   }
 
   .disc-card.disc-hidden{
-    display:flex;
+    display:none;
   }
 
   .disc-card .art .t{
@@ -1119,36 +1119,39 @@ footer .bottom .mono{letter-spacing:.12em;text-transform:uppercase}
 
 
 
-/* ===== HARD OVERRIDE: preorder grid fix ===== */
-@media (min-width:641px){
-  .disc-grid{
-    display:grid !important;
-    grid-template-columns:repeat(4,minmax(0,1fr)) !important;
-    gap:18px !important;
-    overflow:visible !important;
-    scroll-snap-type:none !important;
-    padding-bottom:0 !important;
-  }
-
-  .disc-card{
-    flex:initial !important;
-    max-width:none !important;
-    width:auto !important;
-    scroll-snap-align:none !important;
-  }
-
-  .disc-card.disc-hidden{
-    display:none !important;
-  }
+/* ===== FINAL CLEAN OVERRIDE: preorder cards must never be horizontal ===== */
+.disc-grid{
+  display:grid !important;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:18px !important;
+  overflow:visible !important;
+  scroll-snap-type:none !important;
+  padding-bottom:0 !important;
 }
 
-@media (max-width:1280px) and (min-width:901px){
+.disc-card{
+  width:auto !important;
+  max-width:none !important;
+  min-width:0 !important;
+  flex:none !important;
+  scroll-snap-align:none !important;
+}
+
+.disc-card.disc-hidden{
+  display:none !important;
+}
+
+.show-more-wrap{
+  display:block !important;
+}
+
+@media (max-width:1280px){
   .disc-grid{
     grid-template-columns:repeat(3,minmax(0,1fr)) !important;
   }
 }
 
-@media (max-width:900px) and (min-width:641px){
+@media (max-width:900px){
   .disc-grid{
     grid-template-columns:repeat(2,minmax(0,1fr)) !important;
   }
@@ -1156,71 +1159,12 @@ footer .bottom .mono{letter-spacing:.12em;text-transform:uppercase}
 
 @media (max-width:640px){
   .disc-grid{
-    display:flex !important;
-    overflow-x:auto !important;
-    scroll-snap-type:x mandatory !important;
-    gap:14px !important;
-    padding-bottom:16px !important;
-    -webkit-overflow-scrolling:touch !important;
-    scrollbar-width:none !important;
-  }
-
-  .disc-grid::-webkit-scrollbar{
-    display:none !important;
-  }
-
-  .disc-card{
-    flex:0 0 82vw !important;
-    max-width:340px !important;
-    width:auto !important;
-    scroll-snap-align:start !important;
-  }
-
-  .disc-card.disc-hidden{
-    display:flex !important;
-  }
-
-  .disc-card .art .t{
-    font-size:22px !important;
-    line-height:.95 !important;
-  }
-
-  .disc-card .info h4{
-    font-size:17px !important;
-    line-height:1.05 !important;
-  }
-
-  .disc-card .preorder-btn{
-    padding:10px 12px !important;
-    font-size:10px !important;
-  }
-}
-
-/* ===== FINAL FIX: preorder cards mobile normal grid ===== */
-@media (max-width:640px){
-
-  .disc-grid{
-    display:grid !important;
     grid-template-columns:1fr !important;
     gap:18px !important;
-    overflow:visible !important;
-    scroll-snap-type:none !important;
-    padding-bottom:0 !important;
   }
 
-  .disc-card{
-    width:100% !important;
-    max-width:none !important;
-    flex:none !important;
-    scroll-snap-align:none !important;
-  }
-
-  .disc-card.disc-hidden{
-    display:none !important;
-  }
-
-  .show-more-wrap{
-    display:block !important;
+  .disc-card .cover{
+    aspect-ratio:3/4 !important;
   }
 
   .disc-card .art .t{
@@ -1237,5 +1181,4 @@ footer .bottom .mono{letter-spacing:.12em;text-transform:uppercase}
     padding:10px 14px !important;
     font-size:11px !important;
   }
-
 }
