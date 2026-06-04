@@ -1024,9 +1024,10 @@ section.s{padding:80px 20px;}
   }
 
   .disc-card{
-    flex:0 0 240px;
-    scroll-snap-align:start;
-  }
+  flex:0 0 82vw;
+  max-width:340px;
+  scroll-snap-align:start;
+}
 
   .disc-card.disc-hidden{
     display:flex;
