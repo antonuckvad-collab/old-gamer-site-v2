@@ -1,0 +1,33 @@
+{
+  "phone": "+7 (923) 124-67-47",
+  "tg_orders": "https://t.me/oldgamershop",
+  "tg_channel": "https://t.me/oldgamer_shop",
+  "avito_url": "https://avito.ru",
+  "address": "ул. Троллейная, 130а, ТРЦ Континент, 3 этаж, Новосибирск",
+  "hours_label": "10:00 — 21:00",
+  "hours_open": 10,
+  "hours_close": 21,
+  "hero": {
+    "eyebrow": "Новосибирск · ТРЦ Континент · 3 этаж",
+    "title": "Твой магазин видеоигр в Новосибирске",
+    "lead": "Консоли, диски и аксессуары — новые и проверенные. Чиним технику, принимаем в трейд-ин и привозим под заказ то, чего нет в наличии."
+  },
+  "stats": [
+    { "number": "50+", "label": "консолей в каталоге" },
+    { "number": "300+", "label": "игр и дисков" },
+    { "number": "3 мес", "label": "гарантия на ремонт" }
+  ],
+  "tradein_prices": {
+    "ps5": 42000,
+    "ps4": 14000,
+    "xboxsx": 38000,
+    "switch": 16000,
+    "ps3": 6000
+  },
+  "shop_photos": [
+    "/assets/shop-1.jpg",
+    "/assets/shop-2.jpg",
+    "/assets/shop-3.jpg",
+    "/assets/shop-4.jpg"
+  ]
+}
