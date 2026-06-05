@@ -1118,49 +1118,59 @@ footer .bottom .mono{letter-spacing:.12em;text-transform:uppercase}
 }
 
 
-
-/* ===== FINAL CLEAN OVERRIDE: preorder cards must never be horizontal ===== */
-.disc-grid{
-  display:grid !important;
-  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
-  gap:18px !important;
-  overflow:visible !important;
-  scroll-snap-type:none !important;
-  padding-bottom:0 !important;
-}
-
-.disc-card{
-  width:auto !important;
-  max-width:none !important;
-  min-width:0 !important;
-  flex:none !important;
-  scroll-snap-align:none !important;
-}
-
-.disc-card.disc-hidden{
-  display:none !important;
-}
-
-.show-more-wrap{
-  display:block !important;
-}
-
-@media (max-width:1280px){
-  .disc-grid{
-    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
-  }
-}
-
-@media (max-width:900px){
-  .disc-grid{
-    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
-  }
-}
-
+/* ===== FINAL MOBILE FIXES — 05.06 ===== */
 @media (max-width:640px){
+
+  /* Главный экран: заголовок не вылезает за ширину */
+  .hero{
+    padding:24px 16px 32px !important;
+    gap:24px !important;
+    min-height:auto !important;
+  }
+
+  .hero h1{
+    font-size:46px !important;
+    line-height:1.06 !important;
+    letter-spacing:-.02em !important;
+    max-width:100% !important;
+    overflow-wrap:normal !important;
+  }
+
+  .hero h1 .outline{
+    white-space:normal !important;
+  }
+
+  /* Предзаказы: возвращаем горизонтальный скролл карточек */
   .disc-grid{
-    grid-template-columns:1fr !important;
-    gap:18px !important;
+    display:flex !important;
+    grid-template-columns:none !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    scroll-snap-type:x mandatory !important;
+    gap:14px !important;
+    padding-bottom:16px !important;
+    -webkit-overflow-scrolling:touch !important;
+    scrollbar-width:none !important;
+  }
+
+  .disc-grid::-webkit-scrollbar{
+    display:none !important;
+  }
+
+  .disc-card{
+    flex:0 0 82vw !important;
+    width:auto !important;
+    max-width:340px !important;
+    min-width:0 !important;
+    scroll-snap-align:start !important;
+  }
+
+  .disc-card.disc-hidden{
+    display:flex !important;
+  }
+
+  .show-more-wrap{
+    display:none !important;
   }
 
   .disc-card .cover{
@@ -1168,17 +1178,47 @@ footer .bottom .mono{letter-spacing:.12em;text-transform:uppercase}
   }
 
   .disc-card .art .t{
-    font-size:24px !important;
+    font-size:22px !important;
     line-height:.95 !important;
   }
 
   .disc-card .info h4{
-    font-size:18px !important;
+    font-size:17px !important;
     line-height:1.05 !important;
   }
 
   .disc-card .preorder-btn{
-    padding:10px 14px !important;
-    font-size:11px !important;
+    padding:10px 12px !important;
+    font-size:10px !important;
+  }
+
+  /* Локация: на мобилке убираем карту, фотослайдер растягиваем */
+  .location{
+    grid-template-columns:1fr !important;
+    gap:16px !important;
+  }
+
+  .loc-map-row{
+    grid-template-columns:1fr !important;
+    gap:0 !important;
+  }
+
+  .map{
+    display:none !important;
+  }
+
+  .shop-slider-wrap{
+    width:100% !important;
+    min-height:320px !important;
+  }
+
+  .shop-slider-track{
+    min-height:320px !important;
+  }
+}
+
+@media (max-width:380px){
+  .hero h1{
+    font-size:40px !important;
   }
 }
