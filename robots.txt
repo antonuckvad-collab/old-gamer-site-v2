@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://oldgamer54.ru/sitemap.xml
